@@ -1,0 +1,67 @@
+@import '../overlay/overlay.scss';
+
+.nut-dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 480px;
+  min-height: 200px;
+  padding: 24px;
+  box-sizing: border-box;
+
+  &__outer {
+    position: fixed;
+    max-height: 100%;
+    overflow-y: auto;
+    background-color: #2B2A2C;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    -webkit-overflow-scrolling: touch;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    z-index: 999999;
+    animation-duration: 0.3s;
+  }
+
+  &__header {
+    display: block;
+    text-align: center;
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  &__content {
+    width: 100%;
+    overflow: auto;
+    flex: 1;
+    margin: 30px 0 ;
+    max-height: 300px;
+    line-height: 24px;
+    font-size: 24px;
+    color: #ffffff;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: pre-wrap;
+    text-align: center;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+
+    .nut-dialog_btn {
+      text-align: center;
+      line-height: 64px;
+      width: 178px;
+      height: 76px;
+      font-size: 32px;
+      margin-left: 12px;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,187 @@
+
+.recharge-wrap{
+    * {
+        box-sizing: border-box;
+    }
+    .nut-popup-content{
+        background-color: #ffffff;
+    }
+
+    .nut-popup-footer{
+        width: 100%;
+        background-color: #ffffff;
+    }
+    .balance-wrap{
+        position: relative;
+        width: 654rpx;
+        height: 184rpx;
+        background: linear-gradient(270deg, #000000 -15%, #5A5C69 64%);
+        border-radius: 16rpx 16rpx 16rpx 16rpx;
+        margin: 10px auto 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        box-sizing: border-box;
+        padding: 30px 36px;
+        .title {
+          font-size: 28px;
+          color: #ffffff;
+        }
+        .balance {
+            display: flex;
+            margin-top: 22px;
+          .icon {
+            width: 60px;
+            height: 60px;
+            margin-right: 16px;
+          }
+          .number {
+            font-size: 52px;
+            color: #ffffff;
+            font-weight: bold;
+          }
+        }
+        .bg{
+            position: absolute;
+            right: 0;
+            top: 30px;
+            width: 320px;
+            height: 148px;
+        }
+    }
+    .recharge{
+        padding: 0 40px;
+        box-sizing: border-box;
+        .title{
+            font-size: 36px;
+            font-weight: bold;
+            color: #ffffff;
+            display: flex;
+            justify-content: flex-start;
+            height: 50px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+        .recharge-list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            .recharge-item {
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                width: 324px;
+                height: 112px;
+                background: linear-gradient(270deg, #4C5365 0%, #5A5C69 100%);
+                border-radius: 16rpx 16rpx 16rpx 16rpx;
+                padding: 0 30px;
+                box-sizing: border-box;
+                margin-right: 20px;
+                margin-bottom: 24px;
+                border: 6px solid transparent;
+                &:nth-child(2n){
+                    margin-right: 0;
+                }
+                &.active{
+                    border: 6px solid #FDEFC1;
+                    .select{
+                        display: block;
+                    }
+                }
+                .select{
+                    position: absolute;
+                    right: -3px;
+                    top: -3px;
+                    display: none;
+                    width: 44px;
+                    height: 44px;
+                }
+                .icon{
+                    width: 44px;
+                    height: 44px;
+                    margin-right: 12px;
+                }
+                .amount{
+                    font-size: 36px;
+                    font-weight: bold;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+    .confirm{
+        text-align: center;
+        .immediately{
+            width: 370px;
+            height: 108px;
+            font-size: 32px;
+            color: #ffffff;
+            margin: 108px auto;
+            .nut-button-text-large{
+                width: calc(100% - 32px);
+            }
+        }
+    }
+    
+    .btn {
+        width: 656px;
+        height: 104px;
+        margin: 30px auto;
+    }
+    .payment-method{
+        .title{
+            font-size: 36px;
+            color: #000000;
+            line-height: 42px;
+            font-weight: bold;
+        }
+        .methods {
+          display: flex;
+          flex-direction: column;
+          .wx{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            font-size: 32px;
+            color: #000000;
+            .h5-div{
+                display: flex;
+                align-items: center;
+            }
+            .icon{
+                width: 52px;
+                height: 52px;
+                margin-right: 12px;
+            }
+          }
+          .zfb{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            font-size: 32px;
+            color: #000000;
+            .h5-div{
+                display: flex;
+                align-items: center;
+            }
+            .icon{
+                width: 52px;
+                height: 52px;
+                margin-right: 12px;
+            }
+          }
+        }
+        .url{
+            font-size: 28px;
+            color: #4C5365;
+            overflow-x: auto;
+          }
+    }
+}

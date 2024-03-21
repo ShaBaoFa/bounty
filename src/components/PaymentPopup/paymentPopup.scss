@@ -1,0 +1,372 @@
+@import '../overlay/overlay.scss';
+
+.nut-paymentPopup {
+  position: fixed;
+  max-height: 100%;
+  overflow-y: auto;
+  background-color: #ffffff;
+  color: #fff;
+  -webkit-overflow-scrolling: touch;
+  padding: 44px 32px;
+  box-sizing: border-box;
+  .title-wrap{
+    font-size: 36px;
+    color: #000000;
+    line-height: 42px;
+    font-weight: bold;
+  }
+  .price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 96px;
+    border-bottom: 1px solid #E4E4E4;
+    .unit-price{
+      font-size: 28px;
+      color: #999999;
+    }
+    .total-price {
+        display: flex;
+        align-items: center;
+        font-size: 28px;
+        color: #000000;
+    }
+    .result{
+      font-size: 44px;
+      color: #C52F27;
+      font-weight: bold;
+      margin-left: 20px;
+    }
+  }
+  .coupon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 96px;
+    border-bottom: 1px solid #E4E4E4;
+    .name{
+      display: flex;
+      align-items: center;
+      font-size: 28px;
+      color: #000000;
+    }
+    .select {
+      display: flex;
+      align-items: center;
+      font-size: 28px;
+      color: #000000;
+    }
+  }
+  .payment-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 96px;
+    .title{
+      font-size: 30px;
+      color: #000000;
+      font-weight: bold;
+    }
+    .total {
+      display: flex;
+      align-items: center;
+      font-size: 28px;
+      color: #000000;
+    }
+    .result{
+      font-size: 44px;
+      color: #C52F27;
+      font-weight: bold;
+      margin-left: 20px;
+    }
+  }
+  .balance, .zhenQi{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .name{
+      display: flex;
+      align-items: center;
+      font-size: 28px;
+      color: #000000;
+      line-height: 32px;
+    }
+    .checkbox-wrap{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .text{
+        font-size: 28px;
+        color: #666666;
+        margin-right: 8px;
+      }
+      .red{
+        font-size: 28px;
+        color: #C52F27;
+      }
+    }
+  }
+  .agreement .checkbox-wrap{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 52px;
+    .content {
+      font-size: 28px;
+      color: #000000;
+    }
+    .link {
+      font-size: 28px;
+      color: #C52F27;
+    }
+  }
+  .confirm {
+    .btn {
+      width: 656px;
+      height: 104px;
+      font-size: 32px;
+      margin: 30px auto;
+    }
+  }
+  .explain{
+    font-size: 22px;
+    color: #999999;
+    line-height: 28px;
+  }
+  .icon{
+    width: 64px;
+    height: 64px;
+    margin-right: 20px;
+  }
+}
+
+.nut-paymentPopup-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  &.round {
+    border-radius: 16px;
+  }
+}
+
+.nut-paymentPopup-bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  &.round {
+    border-radius: 16px 16px 0;
+  }
+}
+
+.nut-paymentPopup-right {
+  top: 0;
+  right: 0;
+
+  &.round {
+    border-radius: 12px 0 0 12px;
+  }
+}
+
+.nut-paymentPopup-left {
+  top: 0;
+  left: 0;
+
+  &.round {
+    border-radius: 0 12px 12px 0;
+  }
+}
+
+.nut-paymentPopup-top {
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  &.round {
+    border-radius: 0 0 12px 12px;
+  }
+}
+
+.nut-paymentPopup-slide {
+  @keyframes paymentPopup-scale-fade-in {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes paymentPopup-scale-fade-out {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    to {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+  }
+
+  &-default-enter-active {
+    animation-fill-mode: both;
+    animation-name: paymentPopup-scale-fade-in;
+    animation-duration: 0.3s;
+  }
+
+  &-default-exit-active {
+    animation-fill-mode: both;
+    animation-name: paymentPopup-scale-fade-out;
+    animation-duration: 0.3s;
+  }
+
+  @keyframes paymentPopup-fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes paymentPopup-fade-out {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  &-center-enter-active {
+    animation-fill-mode: both;
+    animation-name: paymentPopup-fade-in;
+    animation-duration: 0.3s;
+  }
+
+  &-center-exit-active {
+    animation-fill-mode: both;
+    animation-name: paymentPopup-fade-out;
+    animation-duration: 0.3s;
+  }
+
+  /* 从顶部滑出 */
+  @keyframes paymentPopup-slide-top-enter {
+    from {
+      transform: translate3d(0, -100%, 0);
+    }
+  }
+
+  @keyframes paymentPopup-slide-top-exit {
+    to {
+      transform: translate3d(0, -100%, 0);
+    }
+  }
+
+  &-top-enter-active,
+  &-top-appear-active {
+    transform: translate3d(0, 0%, 0);
+    animation-fill-mode: both;
+    animation-name: paymentPopup-slide-top-enter;
+    animation-duration: 0.3s;
+  }
+
+  &-top-exit-active {
+    animation-fill-mode: both;
+    animation-name: paymentPopup-slide-top-exit;
+    animation-duration: 0.3s;
+  }
+
+  /* 从右侧滑出 */
+  @keyframes paymentPopup-slide-right-enter {
+    from {
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+
+  @keyframes paymentPopup-slide-right-exit {
+    to {
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+
+  &-right-enter-active,
+  &-right-appear-active {
+    transform: translate3d(0, 0, 0);
+    animation-fill-mode: both;
+    animation-name: paymentPopup-slide-right-enter;
+    animation-duration: 0.3s;
+  }
+
+  &-right-exit {
+    animation-fill-mode: both;
+    animation-name: paymentPopup-slide-right-exit;
+    animation-duration: 0.3s;
+  }
+
+  /* 从底部滑出 */
+  @keyframes paymentPopup-slide-bottom-enter {
+    from {
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+
+  @keyframes slide-bottom-exit {
+    to {
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+
+  &-bottom-enter-active,
+  &-bottom-appear-active {
+    transform: translate(0, 0);
+    animation-fill-mode: both;
+    animation-name: paymentPopup-slide-bottom-enter;
+    animation-duration: 0.3s;
+  }
+
+  &-bottom-exit {
+    animation-fill-mode: both;
+    animation-name: slide-bottom-exit;
+    animation-duration: 0.3s;
+  }
+
+  /* 从左侧滑出 */
+  @keyframes paymentPopup-slide-left-enter {
+    from {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+
+  @keyframes paymentPopup-slide-left-exit {
+    to {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+
+  &-left-enter-active,
+  &-left-appear-active {
+    transform: translate(0, 0);
+    animation-fill-mode: both;
+    animation-name: paymentPopup-slide-left-enter;
+    animation-duration: 0.3s;
+  }
+
+  &-left-exit-active,
+  &-left-exit-done {
+    animation-fill-mode: both;
+    animation-name: paymentPopup-slide-left-exit;
+    animation-duration: 0.3s;
+  }
+}
+
+.nut-overflow-hidden {
+  overflow: hidden !important;
+}

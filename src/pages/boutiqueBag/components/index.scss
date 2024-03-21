@@ -1,0 +1,71 @@
+.nut-cart-goods-card{
+    position: relative;
+    width: 200px;
+    height: 254px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-right: 35px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    &:nth-child(3n){
+        margin-right: 0;
+    }
+    .goods-check{
+        position: absolute;
+        right: 0;
+        top: 16px;
+    }
+    .number{
+        position: absolute;
+        right: 0;
+        bottom: -2px;
+        height: 34px;
+        font-size: 22px;
+        color: #ffffff;
+        font-weight: bold;
+        background: #B23C37;
+        padding: 0 8px;
+        &:after{
+            display: block;
+            content: '';
+            position: absolute;
+            left: -38px;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border-top: 36px solid transparent; 
+            border-right: 20px solid #B23C37;
+            border-left: 20px solid transparent;
+            border-bottom: 0 solid transparent;
+        }
+    }
+    .goods-img-wrap{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border: 8px solid #B23C37;
+        overflow: hidden;
+        box-sizing: border-box;
+        margin-bottom: 12px;
+        .img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .goods-title{
+        display: block;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        font-size: 22px;
+        color: #ffffff;
+        padding: 0 8px;
+        margin-top: 14px;
+        display: -webkit-box; 
+        -webkit-box-orient: vertical; 
+        -webkit-line-clamp: 1; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+    }
+}

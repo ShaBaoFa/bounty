@@ -1,0 +1,318 @@
+@import '../overlay/overlay.scss';
+
+.nut-couponPopup {
+  position: fixed;
+  max-height: 100%;
+  overflow-y: auto;
+  color: #fff;
+  -webkit-overflow-scrolling: touch;
+
+  &-header{
+    width: 633px;
+    height: 152px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    .title-img{
+      width: 633px;
+      height: 192px;
+      position: relative;
+      left: -4px;
+    }
+  }
+  &-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 612px;
+    height: 154px;
+    .btn{
+      text-align: center;
+      line-height: 64px;
+      width: 190px;
+      height: 76px;
+      font-size: 32px;
+      margin-left: 12px;
+      font-weight: bold;
+    }
+  }
+  &-content{
+    box-sizing: border-box;
+    padding: 32px 0 0;
+    width: 572px;
+    background: linear-gradient(180deg, #D1443D 0%, #5B0D07 100%);
+    border-radius: 16px;
+    margin-left: 12px;
+    .content-img{
+      width: 572px;
+      height: 118px;
+    }
+  }
+
+  &__close-icon {
+    position: absolute !important;
+    z-index: 1;
+    color: #ffffff;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:active {
+      opacity: 0.7;
+    }
+
+    &--top-left {
+      top: 40px;
+      left: 40px;
+    }
+
+    &--top-right {
+      top: 40px;
+      right: 40px;
+    }
+
+    &--bottom-left {
+      bottom: 40px;
+      left: 40px;
+    }
+
+    &--bottom-right {
+      right: 40px;
+      bottom: 40px;
+    }
+  }
+}
+
+.nut-couponPopup-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  &.round {
+    border-radius: 12px;
+  }
+}
+
+.nut-couponPopup-bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  &.round {
+    border-radius: 12px 0 0;
+  }
+}
+
+.nut-couponPopup-right {
+  top: 0;
+  right: 0;
+
+  &.round {
+    border-radius: 12px 0 0 12px;
+  }
+}
+
+.nut-couponPopup-left {
+  top: 0;
+  left: 0;
+
+  &.round {
+    border-radius: 0 12px 12px 0;
+  }
+}
+
+.nut-couponPopup-top {
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  &.round {
+    border-radius: 0 0 12px 12px;
+  }
+}
+
+.nut-couponPopup-slide {
+  @keyframes couponPopup-scale-fade-in {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes couponPopup-scale-fade-out {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    to {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+  }
+
+  &-default-enter-active {
+    animation-fill-mode: both;
+    animation-name: couponPopup-scale-fade-in;
+    animation-duration: 0.3s;
+  }
+
+  &-default-exit-active {
+    animation-fill-mode: both;
+    animation-name: couponPopup-scale-fade-out;
+    animation-duration: 0.3s;
+  }
+
+  @keyframes couponPopup-fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes couponPopup-fade-out {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  &-center-enter-active {
+    animation-fill-mode: both;
+    animation-name: couponPopup-fade-in;
+    animation-duration: 0.3s;
+  }
+
+  &-center-exit-active {
+    animation-fill-mode: both;
+    animation-name: couponPopup-fade-out;
+    animation-duration: 0.3s;
+  }
+
+  /* 从顶部滑出 */
+  @keyframes couponPopup-slide-top-enter {
+    from {
+      transform: translate3d(0, -100%, 0);
+    }
+  }
+
+  @keyframes couponPopup-slide-top-exit {
+    to {
+      transform: translate3d(0, -100%, 0);
+    }
+  }
+
+  &-top-enter-active,
+  &-top-appear-active {
+    transform: translate3d(0, 0%, 0);
+    animation-fill-mode: both;
+    animation-name: couponPopup-slide-top-enter;
+    animation-duration: 0.3s;
+  }
+
+  &-top-exit-active {
+    animation-fill-mode: both;
+    animation-name: couponPopup-slide-top-exit;
+    animation-duration: 0.3s;
+  }
+
+  /* 从右侧滑出 */
+  @keyframes couponPopup-slide-right-enter {
+    from {
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+
+  @keyframes couponPopup-slide-right-exit {
+    to {
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+
+  &-right-enter-active,
+  &-right-appear-active {
+    transform: translate3d(0, 0, 0);
+    animation-fill-mode: both;
+    animation-name: couponPopup-slide-right-enter;
+    animation-duration: 0.3s;
+  }
+
+  &-right-exit {
+    animation-fill-mode: both;
+    animation-name: couponPopup-slide-right-exit;
+    animation-duration: 0.3s;
+  }
+
+  /* 从底部滑出 */
+  @keyframes couponPopup-slide-bottom-enter {
+    from {
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+
+  @keyframes slide-bottom-exit {
+    to {
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+
+  &-bottom-enter-active,
+  &-bottom-appear-active {
+    transform: translate(0, 0);
+    animation-fill-mode: both;
+    animation-name: couponPopup-slide-bottom-enter;
+    animation-duration: 0.3s;
+  }
+
+  &-bottom-exit {
+    animation-fill-mode: both;
+    animation-name: slide-bottom-exit;
+    animation-duration: 0.3s;
+  }
+
+  /* 从左侧滑出 */
+  @keyframes couponPopup-slide-left-enter {
+    from {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+
+  @keyframes couponPopup-slide-left-exit {
+    to {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+
+  &-left-enter-active,
+  &-left-appear-active {
+    transform: translate(0, 0);
+    animation-fill-mode: both;
+    animation-name: couponPopup-slide-left-enter;
+    animation-duration: 0.3s;
+  }
+
+  &-left-exit-active,
+  &-left-exit-done {
+    animation-fill-mode: both;
+    animation-name: couponPopup-slide-left-exit;
+    animation-duration: 0.3s;
+  }
+}
+
+.nut-overflow-hidden {
+  overflow: hidden !important;
+}

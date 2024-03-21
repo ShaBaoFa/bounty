@@ -1,0 +1,179 @@
+
+.ranking-wrap{
+    .top-wrap{
+        position: relative;
+        height: 432px;
+        width: 100%;
+        .bg-wrap{
+            position: absolute;
+            left: 40px;
+            bottom: 28px;
+            width: 670px;
+            height: 222px;
+            .bg{
+            width: 670px;
+            height: 222px;
+            }
+        }
+        .top-two{
+            position: absolute;
+            top: 70px;
+            left: 96px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .icon{
+                width: 44px;
+                height: 38px;
+                margin-bottom: 2px;
+            }
+            .avatar {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                opacity: 1;
+                border: 4px solid #D3E0F8;
+            }
+        }
+        .top-one{
+            position: absolute;
+            top: 14px;
+            left: 310px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .icon{
+                width: 44px;
+                height: 38px;
+                margin-bottom: 2px;
+            }
+            .avatar {
+                width: 132px;
+                height: 132px;
+                border-radius: 50%;
+                opacity: 1;
+                border: 4px solid #FFC446;
+            }
+        }
+        .top-three{
+            position: absolute;
+            top: 94px;
+            right: 96px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .icon{
+                width: 44px;
+                height: 38px;
+                margin-bottom: 2px;
+            }
+            .avatar {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                opacity: 1;
+                border: 4px solid #F0C998;
+            }
+        }
+    }
+    .ranking-list{
+        padding-bottom: 148px;
+    }
+    .ranking-item{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 670px;
+        height: 148px;
+        background: #292929;
+        border-radius: 12px 12px 12px 12px;
+        opacity: 1;
+        margin: 0 auto;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        .number{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            font-size: 40px;
+            color: #ffffff;
+            font-weight: 600;
+            .icon{
+                width: 52px;
+                height: 66px;
+            }
+        }
+        .personal-info{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 32px;
+            color: #ffffff;
+            .avatar{
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                opacity: 1;
+                border: 2px solid #FFFFFF;
+                margin-right: 12px;
+            }
+            .name{
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+        }
+    }
+    .personal-number{
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 148px;
+        background: #292929;
+        box-sizing: border-box;
+        padding: 0 20px;
+        .number{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            font-size: 28px;
+            color: #ffffff;
+            font-weight: 600;
+            .icon{
+                width: 52px;
+                height: 66px;
+            }
+        }
+        .personal-info{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 32px;
+            color: #ffffff;
+            .avatar{
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                opacity: 1;
+                border: 2px solid #FFFFFF;
+                margin-right: 12px;
+            }
+            .name{
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+        }
+        .money{
+            position: absolute;
+            right: 40px;
+            top: 50px;
+            font-size: 32px;
+            color: #ffffff;
+        }
+    }
+}

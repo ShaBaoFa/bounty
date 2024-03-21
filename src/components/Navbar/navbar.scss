@@ -1,0 +1,79 @@
+.nut-navbar {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 40px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(255,255,255, 0) 90%);
+  font-size: 30px;
+  color: #ffffff;
+  overflow: hidden;
+  padding-top: 44PX;
+  &--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &--placeholder {
+    display: inline-block;
+    width: 100%;
+  }
+
+  &--safe-area-inset-top {
+    padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
+  }
+
+  &__title {
+    min-width: 53%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: 20px;
+    &.center{
+      margin: 0 auto;
+      justify-content: center;
+    }
+
+    .nut-tabpane {
+      display: none;
+    }
+  }
+
+  &__title ::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__left,
+  &__right {
+    position: absolute;
+    top: 44PX;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 16px;
+  }
+
+  &__left {
+    left: 0;
+    &__back {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+    }
+  }
+
+  &__right {
+    right: 0;
+  }
+}

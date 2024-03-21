@@ -1,0 +1,56 @@
+{
+  "extends": ["taro/react"],
+  "plugins": ["prettier"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    // 不符合prettier规则的写法，提示error
+    "prettier/prettier": 2,
+    /**
+     * "off" 或 0 - 关闭规则
+     * "warn" 或 1 - 开启规则，使用警告级别的错误：warn (不会导致程序退出),
+     * "error" 或 2 - 开启规则，使用错误级别的错误：error (当被触发的时候，程序会退出)
+     */
+    // 关闭当一个模块只有一个导出时，必须使用default。
+    "import/prefer-default-export": 0,
+    // 暂时关闭，建议开启：防止陈旧闭包问题
+    "react-hooks/exhaustive-deps": 0,
+    // 类型断言，支持 as 强转，躲避编辑器检测
+    "@typescript-eslint/consistent-type-assertions": 0,
+    // 以下两点用于react不再需要显式的引用
+    // suppress errors for missing 'import React' in files
+    "react/react-in-jsx-scope": 0,
+    // 防止react被错误的认为没有引用
+    "react/jsx-uses-react": 0,
+    // 支持使用+、!!进行强转
+    "no-implicit-coercion": [2, { "allow": ["!!", "+"] } ],
+    // 关闭禁止使用异步函数作为 Promise executor
+    "no-async-promise-executor": 0,
+    // 使用for of 代替for
+    "@typescript-eslint/prefer-for-of": 0,
+    // parseInt 进制参数
+    "radix": 0,
+    // 重写hlj/typescript 规则，强烈建议开启未引用变量检测
+    "@typescript-eslint/no-unused-vars": 1
+  },
+  // 配置Taro全局变量、类型，防止编译器报错, ESLint: 'xx' is not defined.(no-undef)
+  "globals": {
+    "wx": true,
+    // Taro api 通用类型外层容器
+    "TaroGeneral": true,
+    "require": true,
+    "Page": true,
+    "App": true,
+    "getApp": true,
+    "getCurrentPages": true,
+    // 小程序原生Component
+    "Component": true,
+    "getRegExp": true,
+    "Behavior": true
+  }
+}
+
+

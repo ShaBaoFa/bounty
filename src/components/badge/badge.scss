@@ -1,0 +1,41 @@
+.nut-badge {
+  position: relative;
+  display: inline-block;
+
+  &__icon {
+    display: flex;
+    position: absolute;
+    background: #fefefe;
+    top: -20%;
+    right: -20%;
+    padding: 4px;
+    text-align: center;
+    border-radius: 15px;
+    z-index: 99;
+  }
+
+  &__sup {
+    position: absolute;
+    background: $badge-background-color;
+    color: $badge-color;
+    padding: $badge-padding;
+    font-size: $badge-font-size;
+    font-weight: normal;
+    text-align: center;
+    line-height: 16px;
+    border: $badge-border;
+    border-radius: $badge-border-radius;
+  }
+
+  &__content {
+    transform: $badge-content-transform;
+  }
+
+  &__dot {
+    width: $badge-dot-width;
+    height: $badge-dot-width;
+    border: $badge-border;
+    border-radius: $badge-dot-width;
+    padding: 0;
+  }
+}

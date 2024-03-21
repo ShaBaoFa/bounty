@@ -1,0 +1,174 @@
+.clipCard-wrap {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vh;
+  overflow: hidden;
+
+  .card-holder{
+    position: absolute;
+    width: 750px;
+    height: 1630px;
+    z-index: 0;
+    .ani-img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .record-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-height: 560px;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    .record-info{
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 28px;
+      color: #ffffff;
+      background-color: #171717;
+      padding: 20px 24px;
+      margin: 0 auto 20px;
+      .avatar{
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          opacity: 1;
+          border: 2px solid #FFFFFF;
+          margin-right: 12px;
+      }
+      .name{
+        display: flex;
+        align-items: center;
+          margin-bottom: 4px;
+      }
+      .lottery{
+        font-size: 24px;
+        margin-bottom: 4px;
+      }
+      .time{
+        font-size: 24px;
+        color: #eeeeee;
+      }
+      .level{
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-right: 8px;
+        .icon{
+          position: relative;
+          z-index: 2;
+          width: 34px;
+          height: 34px;
+        }
+        .bg{
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+          height: 34px;
+        }
+      }
+      .number{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        font-size: 24px;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .card-ani {
+    position: absolute;
+    width: 750px;
+    height: calc(100% - 280px);
+    left: 50%;
+    top: 0;
+    margin-left: -50%;
+    overflow: hidden;
+  }
+  .card-item {
+    position: absolute;
+    left: 120px;
+    bottom: -100vh;
+    width: 480px;
+    height: 654px;
+    border-radius: 10px;
+    transform: rotateZ(0deg);
+    transform: perspective(10000);
+    transition: all 1.2s cubic-bezier(0.68, -0.55, 0.27, 1);
+    border-radius: 12px;
+    overflow: hidden;
+    .ani-img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .card-item.ani1 {
+    left: 130px;
+    bottom: 300px;
+    transform: rotateZ(8deg);
+    transition-delay: 0;
+  }
+  .card-item.ani2 {
+    left: 130px;
+    bottom: 300px;
+    transform: rotateZ(8deg);
+    transition-delay: 140ms;
+  }
+  .card-item.ani3 {
+    left: 130px;
+    bottom: 300px;
+    transform: rotateZ(8deg);
+    transition-delay: 280ms;
+  }
+  .card-item.ani4 {
+    left: 130px;
+    bottom: 300px;
+    transform: rotateZ(8deg);
+    transition-delay: 420ms;
+  }
+  .card-item.ani5 {
+    left: 130px;
+    bottom: 300px;
+    transform: rotateZ(8deg);
+    transition-delay: 560ms;
+  }
+  .card-item.ani6 {
+    left: 130px;
+    bottom: 300px;
+    transform: rotateZ(8deg);
+    transition-delay: 700ms;
+  }
+  .card-item.ani7 {
+    left: 130px;
+    bottom: 300px;
+    transform: rotateZ(8deg);
+    transition-delay: 840ms;
+  }
+  .card-item.ani8 {
+    left: 130px;
+    bottom: 300px;
+    transform: rotateZ(8deg);
+    transition-delay: 980ms;
+  }
+  .card-item.ani9 {
+    left: 130px;
+    bottom: 300px;
+    transform: rotateZ(8deg);
+    transition-delay: 1120ms;
+  }
+  .card-item.ani10 {
+    left: 130px;
+    bottom: 300px;
+    transform: rotateZ(8deg);
+    transition-delay: 1260ms;
+  }
+}

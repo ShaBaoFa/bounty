@@ -1,0 +1,156 @@
+
+.select-box-wrap{
+    .page-wrap{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-end;
+        height: 90px;
+        overflow-x: auto;
+        padding: 0 28px 0 40px;
+        &::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+            color: transparent;
+        }
+        .page-item{
+            position: relative;
+            width: 200px;
+            height: 64px;
+            margin-right: 32px;
+            &.selected{
+                &::before{
+                    background-color: #B94641;
+                }  
+            }
+            &::after{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                content: '';
+                display: block;
+                width: 200px;
+                height: 64px;
+                transform: skewX(-6deg);
+                background-color: #ffffff;
+            }
+            &::before{
+                z-index: 2;
+                position: absolute;
+                bottom: 4px;
+                right: 4px;
+                content: '';
+                display: block;
+                width: 200px;
+                height: 60px;
+                transform: skewX(-6deg);
+                border: 4px solid #ffffff;
+                background-color: #0b0b0b;
+            }
+            .page{
+                z-index: 3;
+                position: relative;
+                left: -12px;
+                top: -4px;
+                display: flex;
+                width: 210px;
+                height: 58px;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+                color: #ffffff;
+                font-weight: 600;
+            }
+        }
+    }
+    .level-wrap {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        height: 124px;
+        overflow-x: auto;
+        padding: 0 28px 0 40px;
+        &::-webkit-scrollbar{
+            width: 0;
+            height: 0;
+            color: transparent;
+        }
+    }
+    .level-item {
+        min-width: 68px;
+        font-size: 30px;
+        color: #ffffff;
+        font-weight: bold;
+        margin-right: 28px;
+        white-space: nowrap;
+        &:last-child{
+            min-width: 100px;
+        }
+        &.selected{
+            color: #B94641;
+        }
+    }
+    .classify-list{
+        height: calc(100vh - 90px - 124px - 88PX);
+        overflow: auto;
+        .classify-item{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 686px;
+            min-height: 164px;
+            border: 2px solid #ffffff;
+            margin: 0 auto 24px;
+            .classify-index{
+                position: relative;
+                width: 198px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+                color: #ffffff;
+                font-weight: bold;
+
+                .bg{
+                    z-index: -1;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 112px;
+                    height: 96px;
+                }
+            }
+            .classify-content{
+                flex: 1;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+                .item{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    min-width: 110px;
+                    height: 42px;
+                    font-size: 26px;
+                    font-weight: 600;
+                    color: #FFFFFF;
+                    line-height: 42px;
+                    margin-right: 10px;
+                    &.disabled{
+                        color: #666666;
+                    }
+                    .classify {
+                      margin-right: 10px;
+                      &.selected{
+                        color: #B94641;
+                      }
+                    }
+                }
+            }
+        }
+    }
+}

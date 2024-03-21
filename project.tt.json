@@ -1,0 +1,9 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "太一潮赏|模玩手办一番赏",
+  "appid": "testAppId",
+  "setting": {
+    "es6": false,
+    "minified": false
+  }
+}

@@ -1,0 +1,47 @@
+@import '../TabbarItem/tabbaritem.scss';
+
+.nut-tabbar {
+  border: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  &__wrap {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:last-child {
+    border-right: 0;
+  }
+
+  &__fixed {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+  }
+
+  .safe-wrap{
+    z-index: -1;
+    position: absolute;
+    bottom: env(safe-area-inset-bottom);
+    left: 0;
+    right: 0;
+    height: 128px;
+    background-color: #0B0B0B;
+  }
+
+  &__safe-area {
+    display: block;
+    width: 100%;
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-bottom: constant(safe-area-inset-bottom);
+  }
+}

@@ -1,0 +1,38 @@
+.check-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 36px;
+    height: 36px;
+    margin-right: 16px;
+    padding-left: 36px;
+    box-sizing: border-box;
+    .check-border{
+        z-index: 3;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 36px;
+        height: 36px;
+        border: 6px solid #fff;
+        box-sizing: border-box;
+    }
+    .check-status{
+        z-index: 2;
+        position: absolute;
+        left: 3px;
+        top: 3px;
+        .checked{
+            display: block;
+            width: 32px;
+            height: 32px;
+        }
+    }
+    .children {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 12px;
+    }
+}

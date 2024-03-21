@@ -1,0 +1,52 @@
+.nut-indicator {
+  &__dot {
+    margin: 0 4px;
+
+    &:first-child {
+      margin-left: 0px;
+    }
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  &__dot {
+    display: inline-block;
+    vertical-align: middle;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #000000;
+  }
+
+  &__active {
+    width: 24px;
+    border-radius: 4px;
+    background-color: #ffffff;
+  }
+
+  &__vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .nut-indicator__dot {
+      margin: 8px 0;
+
+      &:first-child {
+        margin-top: 0px;
+      }
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+
+    .nut-indicator__active {
+      width: 8px;
+      height: 8px;
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.matchless-wrap{
+    padding-bottom: 130px;
+    height: calc(100vh - 130px);
+    .header-wrap {
+      position: sticky;
+      top: 0;
+      height: 820px;
+    }
+    .overlay{
+        z-index: 9;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 890px;
+        transition: all 0.5s;
+        opacity: 0;
+        background-color: #0B0B0B;
+    }
+    .header-tab{
+        z-index: 11;
+        position: absolute;
+        top: -142px;
+        opacity: 0;
+        width: 100%;
+        height: 142px;
+        background-color: #0B0B0B;
+        transition: all .5s;
+        &.active{
+            opacity: 1;
+        }
+    }
+    .logo-wrap{
+        z-index: 14;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        height: 136px;
+        .logo{
+            width: 232px;
+            height: 72px;
+            margin: 56px 16px auto 16px;
+        }
+    }
+    .content-wrap{
+        position: relative;
+    }
+    
+.goods-wrap{
+    position: relative;
+    z-index: 9;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background: #0B0B0B;
+    padding: 0 24px;
+    .goods-card{
+        width: 345px;
+        margin-right: 14px;
+        margin-bottom: 14px;
+        background-color: #292929;
+        &:nth-child(2n){
+            margin-right: 0;
+        }
+    }
+}
+.nut-infinite-bottom{
+    height: 48px;
+    line-height: 48px;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+}
+}

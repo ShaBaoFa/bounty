@@ -1,0 +1,56 @@
+
+.record-wrap{
+    * {
+        box-sizing: border-box;
+    }
+    .record-list{
+        height: calc(100vh - 88PX);
+        .nut-infinite-bottom{
+            height: 48px;
+            line-height: 48px;
+            font-size: 24px;
+            text-align: center;
+            color: #fff;
+        }
+        .record-item {
+          display: flex;
+          flex-direction: column;
+          width: 670px;
+          background-color: #292929;
+          margin: 0 auto 20px;
+          padding: 30px;
+          box-sizing: border-box;
+          .title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 42px;
+            margin-bottom: 16px;
+            .name{
+                font-size: 30px;
+                color: #ffffff;
+            }
+          }
+          .content{
+            font-size: 26px;
+            line-height: 32px;
+            color: #ffffff;
+          }
+          .time-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 36px;
+            .time{
+                font-size: 26px;
+                color: #999999;
+            }
+            .result{
+                
+                font-size: 26px;
+                color: #999999;
+            }
+          }
+        }
+    }
+}

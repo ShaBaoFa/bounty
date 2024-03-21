@@ -1,0 +1,87 @@
+
+.order-wrap{
+    * {
+        box-sizing: border-box;
+    }
+    .order-list{
+        height: calc(100vh - 88PX);
+        .nut-infinite-bottom{
+            height: 48px;
+            line-height: 48px;
+            font-size: 24px;
+            text-align: center;
+            color: #fff;
+        }
+        .order-item {
+          display: flex;
+          flex-direction: column;
+          width: 670px;
+          background-color: #292929;
+          margin: 0 auto 20px;
+          padding: 30px;
+          box-sizing: border-box;
+        }
+        
+        .prize-list{
+          padding: 0;
+          max-height: 240px;
+          overflow-y: auto;
+          .prize-item{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 32px;
+            background-color: #E4E4E4;
+            margin-bottom: 24px;
+            .img{
+                width: 100px;
+                height: 100px;
+                margin-right: 24px;
+                .image{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .content{
+                display: flex;
+                flex-direction: column;
+                .name{
+                    font-size: 28px;
+                    color: #000000;
+                    margin-bottom: 12px;
+                }
+                .number{
+                    font-size: 28px;
+                    color: #000000;
+                }
+            }
+        }
+      }
+      .order-state{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        color: #B94641;
+      }
+      .cell-wrap{
+        display: flex;
+        height: 88px;
+        justify-content: space-around;
+        align-items: center;
+        .label{
+          width: 120px;
+          font-size: 28px;
+          color: #ffffff;
+        }
+        .input {
+          flex: 1;
+          font-size: 28px;
+          color: #ffffff;
+          text-align: right;
+          margin-right: 20px;
+          margin-left: 120px;
+        }
+      }
+    }
+}

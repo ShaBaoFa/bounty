@@ -1,0 +1,10 @@
+.custom-tab-wrap{
+    height: calc(150px + env(safe-area-inset-bottom));
+    background: none;
+}
+.tabbar-icon{
+    position: relative;
+    top: -12px;
+    width: 120px;
+    height: 120px;
+}
